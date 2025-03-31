@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const palindromes = function (palabra) {
+    validos = "abcdefghijklmnopqrstuvwxyz1234567890"
+    palabra = palabra.toLowerCase()
+    newword = palabra.split("");
+    let total = newword.length;
+    contador = 0
+    for (let i = 0; i <= total; i++) {
+        if (newword[i] != newword[total - 1 -i]) {
+            console.log(newword[i])
+            console.log(newword[total - 1 - i])
+            contador += 1
+        }
+    }
+    if (contador == 0) {
+        return true
+    }
+    else {
+        return false
+    }
+};
+
+
+console.log(palindromes('Racecar!'))
+   </script>
+</body>
+</html>
